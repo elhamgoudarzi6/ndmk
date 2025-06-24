@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+.next/
+.DS_Store
+.env
+dist/
+
+# VSCode
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
