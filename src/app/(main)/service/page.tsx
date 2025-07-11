@@ -1,5 +1,4 @@
 "use client";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
 import { TbChevronDown, TbChevronUp } from "react-icons/tb";
 
