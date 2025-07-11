@@ -35,6 +35,10 @@ const images = [
     "/assets/images/38.jpg",
     "/assets/images/39.jpg",
     "/assets/images/40.jpg",
+    "/assets/images/41.jpg",
+    "/assets/images/42.jpg",
+    "/assets/images/43.jpg",
+    "/assets/images/44.jpg",
 ];
 
 const shuffleArray = (array: string[]) => {
@@ -47,26 +51,26 @@ const shuffleArray = (array: string[]) => {
 };
 
 const GridGallery = () => {
- const [isMobile, setIsMobile] = useState(false);
-  const [hasMounted, setHasMounted] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const [hasMounted, setHasMounted] = useState(false);
 
-  useEffect(() => {
-    setHasMounted(true);
+    useEffect(() => {
+        setHasMounted(true);
 
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
-  const columns = useMemo(() => {
-    const count = isMobile ? 2 : 4;
-    return Array.from({ length: count }, () => shuffleArray(images));
-  }, [isMobile]);
+    const columns = useMemo(() => {
+        const count = isMobile ? 2 : 4;
+        return Array.from({ length: count }, () => shuffleArray(images));
+    }, [isMobile]);
 
-  if (!hasMounted) return null; // ✅ جلوگیری از Hydration error
+    if (!hasMounted) return null; // ✅ جلوگیری از Hydration error
 
 
     return (

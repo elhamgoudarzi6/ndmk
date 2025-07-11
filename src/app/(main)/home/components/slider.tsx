@@ -14,6 +14,11 @@ const images = [
     { normal: "/assets/images/27.jpg", hover: "/assets/images/21.jpg" },
     { normal: "/assets/images/23.jpg", hover: "/assets/images/28.jpg" },
     { normal: "/assets/images/24.jpg", hover: "/assets/images/25.jpg" },
+    { normal: "/assets/images/30.jpg", hover: "/assets/images/31.jpg" },
+    { normal: "/assets/images/40.jpg", hover: "/assets/images/41.jpg" },
+    { normal: "/assets/images/32.jpg", hover: "/assets/images/33.jpg" },
+    { normal: "/assets/images/34.jpg", hover: "/assets/images/35.jpg" },
+    { normal: "/assets/images/36.jpg", hover: "/assets/images/37.jpg" },
 ];
 
 const Slider = () => {
@@ -45,12 +50,12 @@ const Slider = () => {
                 {images.map((img, index) => (
                     <SwiperSlide key={index}>
                         <div className="relative w-full h-90 group rounded-xl overflow-hidden">
-                                <Image width={500} height={500}
+                            <Image width={500} height={500}
                                 src={img.normal}
                                 alt={`Slide ${index + 1}`}
                                 className="w-full h-full object-cover transition-opacity duration-700 ease-in-out group-hover:opacity-0"
                             />
-                                 <Image width={500} height={500}
+                            <Image width={500} height={500}
                                 src={img.hover}
                                 alt={`Slide hover ${index + 1}`}
                                 className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"

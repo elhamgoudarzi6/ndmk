@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const ContactPage = () => {
     return (
-        <section className="container flex items-center justify-center pt-20 md:px-0 text-gray-300">
+        <section className="container flex items-center justify-center pt-20 px-10 md:px-0 text-gray-300">
             <div className="max-w-4xl">
                 <h1 className="text-5xl font-semibold mb-6 border-b border-gray-800 pb-4">
                     Get in Touch
@@ -26,7 +26,7 @@ const ContactPage = () => {
                     </div>
                     <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5" />
-                        <span>Shoreditch, London, UK</span>
+                        <span>LCI, London, UK</span>
                     </div>
                 </div>
 

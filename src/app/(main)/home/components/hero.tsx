@@ -27,7 +27,7 @@ const Hero = () => {
         </p>
 
         <Link href="/service" prefetch={true} className="inline-flex items-center justify-center backdrop-blur-2xl bg-white/10 rounded-full pl-2 pr-10 py-1 mt-5">
-            <Image width={200} height={200} src="/assets/images/p.jpg" alt="hippo" className="w-12 h-12 rounded-full mr-5" />
+            <Image width={200} height={200} src="/assets/images/6.jpg" alt="hippo" className="w-12 h-12 rounded-full mr-5" />
           <span className="text-base font-medium text-white">who are we ?</span>
         </Link>
 

@@ -1,6 +1,7 @@
 "use client";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
+import { TbChevronDown, TbChevronUp } from "react-icons/tb";
 
 const faqs1 = [
   { question: ' FASHION CAMPAIGN PHOTOGRAPHY ', reply: 'Whether your brand requires clean e-commerce model shots, seasonal lookbooks, or a large-scale branded campaign, NDMK AGENCY is equipped to deliver outstanding visual content. From conceptualizing creative direction to handling the logistics— securing studios, models, styling teams, and photographers—we oversee every detail to ensure a smooth production process. The result? High-quality, visually compelling imagery that authentically represents your brand across both digital and print platforms.' },
@@ -49,7 +50,7 @@ const FashionAgency = () => {
   return (
     <section className="w-full mx-auto text-white my-10">
       <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
-        <div className="col-span-12 md:col-span-7 text-6xl">SERVICES</div>
+        <div className="col-span-12 md:col-span-7 text-4xl md:text-6xl">SERVICES</div>
         <p className="col-span-12 md:col-span-5 text-sm text-gray-300 text-justify leading-relaxed">
           NDMK agency is a London-based creative studio that brings brands to life through innovative digital
           experiences. We specialize in crafting websites, e-commerce platforms, branding, and visual content for the
@@ -66,7 +67,7 @@ const FashionAgency = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
-        <div className="col-span-12 md:col-span-6 text-6xl">CREATIVE CONTENT FOR FASHION</div>
+        <div className="col-span-12 md:col-span-6 text-4xl md:text-6xl">CREATIVE CONTENT FOR FASHION</div>
         <div className="col-span-12 md:col-span-6 text-sm text-gray-300 md:px-5">
           <p className="text-justify leading-relaxed">
             Even if we do say so ourselves, NDMK AGENCY is one of London’s leading fashion creative agencies, seamlessly
@@ -81,15 +82,19 @@ const FashionAgency = () => {
             push the boundaries of fashion, lifestyle, and beauty branding.
           </p>
           <div className=" mt-5">
-            {faqs1.map((faq, index) => (
-              <div key={index} className="border-b border-gray-800 pb-2">
-                <button className="w-full flex justify-between items-center uppercase text-sm font-semibold py-2 focus:outline-none" onClick={() => toggleFAQ1(index)}>
-                  {faq.question}
-                  {openIndex1 === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            {faqs1.map((item, index) => (
+              <div key={index} className=" border-b border-gray-800 overflow-hidden transition-all duration-300">
+                <button onClick={() => toggleFAQ1(index)} className="w-full flex justify-between items-center  py-4 text-left">
+                  <span className="text-sm md:text-base font-medium">
+                    {item.question}
+                  </span>
+                  {openIndex1 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
                 </button>
-                <div className={`transition-max-height duration-300 ease-in-out overflow-hidden ${openIndex1 === index ? "max-h-40" : "max-h-0"}`}>
-                  <p className="text-sm text-gray-400 p-2">{faq.reply}</p>
-                </div>
+                {openIndex1 === index && (
+                  <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
+                    {item.reply}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -104,7 +109,7 @@ const FashionAgency = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
-        <div className="col-span-12 md:col-span-6 text-6xl">WE BUILD FASHION WEBSITES</div>
+        <div className="col-span-12 md:col-span-6 text-4xl md:text-6xl">WE BUILD FASHION WEBSITES</div>
         <div className="col-span-12 md:col-span-6 text-sm text-gray-300 md:px-5">
           <p className="text-justify leading-relaxed">
             NDMK Studio’s expert web design team have over a decade of experience supporting start ups and international
@@ -115,15 +120,19 @@ const FashionAgency = () => {
             precision, attention to detail, and a deep appreciation for the unique needs of fashion brands.
           </p>
           <div className=" mt-5">
-            {faqs2.map((faq, index) => (
-              <div key={index} className="border-b border-gray-800 pb-2">
-                <button className="w-full flex justify-between items-center uppercase text-sm font-semibold py-2 focus:outline-none" onClick={() => toggleFAQ2(index)}>
-                  {faq.question}
-                  {openIndex2 === index ? <ChevronUp size={20} className="text-red-800" /> : <ChevronDown size={20} className="text-red-800" />}
+            {faqs2.map((item, index) => (
+              <div key={index} className=" border-b border-gray-800 overflow-hidden transition-all duration-300">
+                <button onClick={() => toggleFAQ2(index)} className="w-full flex justify-between items-center  py-4 text-left">
+                  <span className="text-sm md:text-base font-medium">
+                    {item.question}
+                  </span>
+                  {openIndex2 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
                 </button>
-                <div className={`transition-max-height duration-300 ease-in-out overflow-hidden ${openIndex2 === index ? "max-h-40" : "max-h-0"}`}>
-                  <p className="text-sm text-gray-400 p-2">{faq.reply}</p>
-                </div>
+                {openIndex2 === index && (
+                  <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
+                    {item.reply}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -138,7 +147,7 @@ const FashionAgency = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
-        <div className="col-span-12 md:col-span-6 text-6xl">Crafting Brand Identity & Creative Direction in Fashion Storytelling</div>
+        <div className="col-span-12 md:col-span-6 text-4xl md:text-6xl">Crafting Brand Identity & Creative Direction in Fashion Storytelling</div>
         <div className="col-span-12 md:col-span-6 text-sm text-gray-300 md:px-5">
           <p className="text-justify leading-relaxed">
             Creating an exceptional fashion brand identity is more than just aesthetics; it&rsquo;s about sculpting an identity
@@ -156,15 +165,19 @@ const FashionAgency = () => {
             fashion creative direction helps a brand get noticed and be more successful.
           </p>
           <div className=" mt-5">
-            {faqs3.map((faq, index) => (
-              <div key={index} className="border-b border-gray-800 pb-2">
-                <button className="w-full flex justify-between items-center uppercase text-sm font-semibold py-2 focus:outline-none" onClick={() => toggleFAQ3(index)}>
-                  {faq.question}
-                  {openIndex3 === index ? <ChevronUp size={20} className="text-red-800" /> : <ChevronDown size={20} className="text-red-800" />}
+            {faqs3.map((item, index) => (
+              <div key={index} className=" border-b border-gray-800 overflow-hidden transition-all duration-300">
+                <button onClick={() => toggleFAQ3(index)} className="w-full flex justify-between items-center  py-4 text-left">
+                  <span className="text-sm md:text-base font-medium">
+                    {item.question}
+                  </span>
+                  {openIndex3 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
                 </button>
-                <div className={`transition-max-height duration-300 ease-in-out overflow-hidden ${openIndex3 === index ? "max-h-40" : "max-h-0"}`}>
-                  <p className="text-sm text-gray-400 p-2">{faq.reply}</p>
-                </div>
+                {openIndex3 === index && (
+                  <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
+                    {item.reply}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -178,7 +191,7 @@ const FashionAgency = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
-        <div className="col-span-12 md:col-span-6 text-6xl">360 PRODUCTION FOR FASHION SHOOTS</div>
+        <div className="col-span-12 md:col-span-6 text-4xl md:text-6xl">360 PRODUCTION FOR FASHION SHOOTS</div>
         <div className="col-span-12 md:col-span-6 text-sm text-gray-300 md:px-5">
           <p className="text-justify leading-relaxed">
             A successful content shoot starts with an iconic idea, brought to life through careful and dedicated production.
@@ -188,15 +201,19 @@ const FashionAgency = () => {
             efficiently to ensure the perfect, and seemingly effortless, outcome.
           </p>
           <div className=" mt-5">
-            {faqs4.map((faq, index) => (
-              <div key={index} className="border-b border-gray-800 pb-2">
-                <button className="w-full flex justify-between items-center uppercase text-sm font-semibold py-2 focus:outline-none" onClick={() => toggleFAQ4(index)}>
-                  {faq.question}
-                  {openIndex4 === index ? <ChevronUp size={20} className="text-red-800" /> : <ChevronDown size={20} className="text-red-800" />}
+            {faqs4.map((item, index) => (
+              <div key={index} className=" border-b border-gray-800 overflow-hidden transition-all duration-300">
+                <button onClick={() => toggleFAQ4(index)} className="w-full flex justify-between items-center  py-4 text-left">
+                  <span className="text-sm md:text-base font-medium">
+                    {item.question}
+                  </span>
+                  {openIndex4 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
                 </button>
-                <div className={`transition-max-height duration-300 ease-in-out overflow-hidden ${openIndex4 === index ? "max-h-40" : "max-h-0"}`}>
-                  <p className="text-sm text-gray-400 p-2">{faq.reply}</p>
-                </div>
+                {openIndex4 === index && (
+                  <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
+                    {item.reply}
+                  </div>
+                )}
               </div>
             ))}
           </div>

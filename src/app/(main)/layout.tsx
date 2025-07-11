@@ -10,6 +10,9 @@ import GoToTop from "../layout/gototop";
 export const metadata: Metadata = {
   title: "NDMK AGENCY",
   description: "ndmk agency best for you",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

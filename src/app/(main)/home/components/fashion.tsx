@@ -26,7 +26,7 @@ const Fashion = () => {
             {/* عکس بالا چپ */}
             <div className="flex items-center justify-center">
                 <Image width={500} height={500}
-                    src="/assets/images/bg.png"
+                    src="/assets/images/bg1.png"
                     alt="Image 1"
                     className="hidden md:block w-50 h-50 object-contain"
                 />
@@ -108,7 +108,7 @@ const Fashion = () => {
             {/* عکس پایین راست */}
             <div className="flex items-center justify-center">
                 <Image width={500} height={500}
-                    src="/assets/images/bg2.jpg"
+                    src="/assets/images/bg2.png"
                     alt="Image 4"
                     className="hidden md:block w-50 h-50 object-contain"
                 />
