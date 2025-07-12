@@ -3,7 +3,7 @@ import Image from "next/image";
 const images = [
   "/assets/images/web1.jpg",
   "/assets/images/web2.jpg",
-  "/assets/images/web1.jpg",
+  "/assets/images/web3.jpg",
 ];
 
 const Portfolio = () => {
@@ -14,7 +14,7 @@ const Portfolio = () => {
         {images.map((img, index) => (
           <div key={index} className="group overflow-hidden rounded h-80 cursor-pointer">
             <Image
-              width={500} height={500} src={img} alt={`portfolio-${index}`}
+              width={700} height={700} src={img} alt={`portfolio-${index}`}
               className="w-full h-auto min-h-full object-cover transition-transform duration-[7000ms] ease-in-out group-hover:translate-y-[-75%]" />
           </div>
         ))}
