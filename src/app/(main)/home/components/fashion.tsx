@@ -34,13 +34,6 @@ const Fashion = () => {
 
             {/* بخش وسطی با متن و تصویر */}
             <div className="flex flex-col justify-center items-center md:row-span-2 px-5 md:px-0">
-                <h2 className="text-xl md:text-3xl text-gray-300 mb-10 md:px-5">
-                    <span>Everything Prettier With </span>
-                    <span className="relative z-10 px-2 inline-block before:absolute before:inset-x-0 before:bottom-0 before:h-[50%] before:bg-red-800 before:-z-10">
-                        NDMK
-                    </span>
-                    <span> Agency</span>
-                </h2>
                 <div className="flex items-center justify-center w-full md:px-5">
                     <Image width={500} height={500}
                         src="/assets/images/gg.jpg"
