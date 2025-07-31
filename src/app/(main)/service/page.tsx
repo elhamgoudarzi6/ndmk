@@ -11,7 +11,6 @@ const faqs1 = [
 const faqs2 = [
   { question: 'E-COMMERCE WEBSITES', reply: 'We design and build intelligent e-commerce and branded websites for fashion, lifestyle and luxury clients. Our dedicated Shopify developers specialise in everything from cost-effective sites to completely bespoke builds, with a creative, commercial approach to everything we do. Whether youre looking to improve or refresh your current Shopify store, or replatform from Magento, or WooCommerce we have a solution to fit your budget' },
   { question: 'FASHION WEBSITE DESIGN', reply: 'Your online presence is an extension of your brand, embodying all the great things your business stands for. With decades of experience in the fashion and lifestyle industries, and an up-to-the-minute understanding of the contemporary digital landscape, we pride ourselves on our ability to interpret your ideas and communicate them through innovative brand portfolio websites and e-commerce web design.' },
-  { question: ' SHOPIFY EXPERTS ', reply: 'As London based Shopify developers we live and breathe Shopify. As an e-commerce platform it offers an enormous amount of flexibility for small startups and larger enterprises alike, while providing robust, up-to-date infrastructure to build your digital business on. Being a certified Shopify Experts agency means we know the system inside out and our team of developers and creatives know exactly how to pull its levers for a big impact and maximum ROI. Read more about how to find a Shopify website builder here.' },
 
 ];
 const faqs3 = [
@@ -24,6 +23,36 @@ const faqs4 = [
   { question: 'SOCIAL MEDIA STRATEGY', reply: 'We offer a comprehensive social media strategy service for the fashion sector. Our tailored approach encompasses a detailed audit, platform-specific tactics, and engaging content planning to resonate with your target audience. Our service also includes creative visual content, a social strategy document, paid promotion strategies, and crucial metrics to measure success. With an emphasis on flexibility and adaptability, our strategy ensures your brand remains ahead of evolving trends and audience behaviours, while driving a consistent brand image across all platforms.' },
   { question: 'DIGITAL ADVERTISING & PPC', reply: 'We specialise in digital marketing for the fashion brands, offering tailored strategies that drive sales and brand awareness. Our performance marketing expertise spans e-commerce, international reach, social media engagement, and data-driven campaigns. ur commitment is to ensure your fashion brand shines brightly in the competitive digital landscape, connecting authentically with a global audience, staying ahead of trends and importantly driving sales while staying on brand.' },
 ];
+const faqs5 = [
+  {
+    question: 'MODELING PORTFOLIO PHOTOGRAPHY',
+    reply: 'We collaborate with models to create striking, agency-ready portfolio images — including headshots, full-body, and styled looks that highlight personality and range. Whether you\'re building your first book or updating your portfolio, we tailor each shoot to showcase your unique look and versatility.'
+  },
+  {
+    question: 'SCHOOL & GRADUATION PORTRAITS',
+    reply: 'From annual school photos to graduation ceremonies, we offer polished portrait sessions for students and institutions. Our approach ensures a smooth experience, capturing these milestones with clarity, care, and professionalism — ideal for yearbooks, announcements, or family keepsakes.'
+  },
+  {
+    question: 'FOOD PHOTOGRAPHY',
+    reply: 'We style and shoot dishes to highlight texture, color, and flavor — creating mouthwatering visuals perfect for restaurants, chefs, cookbooks, or social media marketing. Each shot is crafted to reflect the essence of your culinary brand and make your food stand out.'
+  },
+  {
+    question: 'INTERIOR & REAL ESTATE PHOTOGRAPHY',
+    reply: 'We provide high-quality imagery for real estate agents, architects, and interior designers — using natural light, wide-angle compositions, and optional drone photography to capture spaces with depth, clarity, and atmosphere. Perfect for listings, portfolios, and promotional materials.'
+  },
+  {
+    question: 'EVENT PHOTOGRAPHY',
+    reply: 'From corporate functions to community events and private parties, we capture the energy and key moments that make your event memorable. Our discreet approach and fast turnaround let you focus on hosting, while we document everything from candid moments to formal highlights.'
+  },
+  {
+    question: 'HOTEL & TRAVEL PHOTOGRAPHY',
+    reply: 'We partner with hotels, resorts, and travel brands to create inviting, high-impact imagery that sells the experience. From room interiors and amenities to destination highlights and lifestyle moments, our visuals help attract guests and elevate your brand presence across web, print, and social media.'
+  },
+  {
+    question: 'LIFESTYLE & WELLBEING PHOTOGRAPHY',
+    reply: 'We capture authentic, aspirational imagery for lifestyle, wellness, and personal brands — including fitness, mindfulness, skincare, and holistic living. Our shoots are designed to reflect your values, tell your story, and connect with your audience through natural, clean visuals.'
+  }
+];
 
 
 const FashionAgency = () => {
@@ -31,6 +60,7 @@ const FashionAgency = () => {
   const [openIndex2, setOpenIndex2] = useState<number | null>(null);
   const [openIndex3, setOpenIndex3] = useState<number | null>(null);
   const [openIndex4, setOpenIndex4] = useState<number | null>(null);
+  const [openIndex5, setOpenIndex5] = useState<number | null>(null);
 
   const toggleFAQ1 = (index: number) => {
     setOpenIndex1(openIndex1 === index ? null : index);
@@ -46,15 +76,18 @@ const FashionAgency = () => {
   const toggleFAQ4 = (index: number) => {
     setOpenIndex4(openIndex4 === index ? null : index);
   };
+  const toggleFAQ5 = (index: number) => {
+    setOpenIndex5(openIndex5 === index ? null : index);
+  };
   return (
     <section className="w-full mx-auto text-white my-10">
       <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
-        <div className="col-span-12 md:col-span-7 text-4xl md:text-6xl">SERVICES</div>
-        <p className="col-span-12 md:col-span-5 text-sm text-gray-300 text-justify leading-relaxed">
-          NDMK agency is a London-based creative studio that brings brands to life through innovative digital
-          experiences. We specialize in crafting websites, e-commerce platforms, branding, and visual content for the
-          fashion, lifestyle, and beauty industries. From emerging start-ups to globally recognized luxury brands, we
-          create tailored solutions that elevate our clients in the digital space.
+        <div className="col-span-12 md:col-span-4 text-4xl md:text-6xl">SERVICES</div>
+        <p className="col-span-12 md:col-span-8 text-sm text-gray-300 text-justify leading-relaxed">
+          NDMK Agency is a London-based creative studio that brings brands to life through innovative digital experiences. We specialize in crafting websites, e-commerce platforms, branding, and visual content for the fashion, lifestyle, and beauty industries.
+          Even if we do say so ourselves, NDMK is one of London’s leading fashion creative agencies — seamlessly merging bold strategy with cutting-edge digital solutions. Whether we’re launching an emerging brand or elevating an established luxury label, our goal is to make a lasting impact in the digital and creative space.
+          What sets us apart? A strong foundation in brand strategy and retail expertise — paired with a tight-knit team that’s passionate about crafting distinctive, memorable brand identities. Our innovative approach and sharp creative vision have positioned us as a top-tier agency in the industry.
+          Based in one of the world’s most vibrant creative capitals, we draw inspiration from London’s cultural richness and ever-evolving artistic energy — using it to push boundaries in fashion, lifestyle, and beauty branding.
         </p>
       </div>
 
@@ -87,7 +120,7 @@ const FashionAgency = () => {
                   <span className="text-sm md:text-base font-medium">
                     {item.question}
                   </span>
-                  {openIndex1 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
+                  {openIndex1 === index ? (<TbChevronUp size={20} />) : (<TbChevronDown size={20} />)}
                 </button>
                 {openIndex1 === index && (
                   <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
@@ -125,7 +158,7 @@ const FashionAgency = () => {
                   <span className="text-sm md:text-base font-medium">
                     {item.question}
                   </span>
-                  {openIndex2 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
+                  {openIndex2 === index ? (<TbChevronUp size={20} />) : (<TbChevronDown size={20} />)}
                 </button>
                 {openIndex2 === index && (
                   <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
@@ -170,7 +203,7 @@ const FashionAgency = () => {
                   <span className="text-sm md:text-base font-medium">
                     {item.question}
                   </span>
-                  {openIndex3 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
+                  {openIndex3 === index ? (<TbChevronUp size={20} />) : (<TbChevronDown size={20} />)}
                 </button>
                 {openIndex3 === index && (
                   <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
@@ -206,9 +239,44 @@ const FashionAgency = () => {
                   <span className="text-sm md:text-base font-medium">
                     {item.question}
                   </span>
-                  {openIndex4 === index ? (<TbChevronUp size={20} className="text-red-800" />) : (<TbChevronDown size={20} className="text-red-800" />)}
+                  {openIndex4 === index ? (<TbChevronUp size={20} />) : (<TbChevronDown size={20} />)}
                 </button>
                 {openIndex4 === index && (
+                  <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
+                    {item.reply}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+
+    <div className="flex justify-center mb-5">
+        <video className="w-full shadow-2xl" autoPlay muted loop playsInline>
+          <source src="/assets/images/7.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+
+      <div className="grid grid-cols-12 gap-4 md:p-10 p-5">
+        <div className="col-span-12 md:col-span-6 text-4xl md:text-7xl">Photography Services</div>
+        <div className="col-span-12 md:col-span-6 text-sm text-gray-300 md:px-5">
+          <p className="text-justify leading-relaxed">
+            At NDMK, we deliver high-impact, professional photography across a range of industries and moments. Whether it's portraits, food, spaces, or events, our work is crafted to elevate your brand, story, or occasion.
+          </p>
+          <div className=" mt-5">
+            {faqs5.map((item, index) => (
+              <div key={index} className=" border-b border-gray-800 overflow-hidden transition-all duration-300">
+                <button onClick={() => toggleFAQ5(index)} className="w-full flex justify-between items-center  py-4 text-left">
+                  <span className="text-sm md:text-base font-medium">
+                    {item.question}
+                  </span>
+                  {openIndex5 === index ? (<TbChevronUp size={20} />) : (<TbChevronDown size={20} />)}
+                </button>
+                {openIndex5 === index && (
                   <div className="px-3 py-5 text-sm text-gray-400 leading-relaxed text-justify">
                     {item.reply}
                   </div>

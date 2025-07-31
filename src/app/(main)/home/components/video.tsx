@@ -38,7 +38,7 @@ const VideoSlider = () => {
       {/* Title Section */}
       <div className="animate-fade-in-left duration-[2000ms] delay-[100ms] text-gray-300 flex flex-col items-start justify-start space-y-2 px-4 mt-10">
         <h3 className="text-2xl md:text-3xl">OUR SERVICES</h3>
-        <h3 className="text-2xl md:text-3xl  text-red-800 animate-typing">SUPPORT FASHION</h3>
+        <h3 className="text-2xl md:text-3xl">SUPPORT FASHION</h3>
         <h3 className="text-2xl md:text-3xl">BRANDS WITH EVERYTHING</h3>
         <h3 className="text-2xl md:text-3xl">DIGITALLY CREATIVE</h3>
       </div>

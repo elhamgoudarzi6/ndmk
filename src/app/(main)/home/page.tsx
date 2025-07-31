@@ -20,8 +20,9 @@ const HomePage = () => {
       <Wave />
       <VideoSlider />
       <Fashion />
+            <Why />
       <Clip />
-      <Why />
+
       <Gallery />
       <Slider />
       <GridGallery />

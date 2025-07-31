@@ -75,6 +75,9 @@ const GridGallery = () => {
 
     return (
         <section className="container mx-auto h-[80vh] overflow-hidden py-10 px-4">
+              <h1 className="mb-15 text-center text-4xl md:text-5xl font-bold text-gray-300">
+               Flash Studio London 
+            </h1>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-full">
                 {columns.map((columnImages, colIndex) => (
                     <div key={colIndex} className="relative h-full overflow-hidden">
