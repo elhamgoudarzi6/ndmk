@@ -265,7 +265,7 @@ const FashionAgency = () => {
         <div className="col-span-12 md:col-span-6 text-4xl md:text-7xl">Photography Services</div>
         <div className="col-span-12 md:col-span-6 text-sm text-gray-300 md:px-5">
           <p className="text-justify leading-relaxed">
-            At NDMK, we deliver high-impact, professional photography across a range of industries and moments. Whether it's portraits, food, spaces, or events, our work is crafted to elevate your brand, story, or occasion.
+            At NDMK, we deliver high-impact, professional photography across a range of industries and moments. Whether its portraits, food, spaces, or events, our work is crafted to elevate your brand, story, or occasion.
           </p>
           <div className=" mt-5">
             {faqs5.map((item, index) => (
